@@ -1,0 +1,1 @@
+console.log(" Nome: Victor\n Idade: 16 anos\n Cidade: Santa Rita do Passa Quatro\n Turma: 2ºB\n Filme/Série: Como Treinar seu Dragon\n Time: São Paulo(Tricolor paulista🔴⚪⚫)\n Comida: Churrasco\n Hobby: Musculação\n Música: The Kill\n Animal: Dachshund ");
