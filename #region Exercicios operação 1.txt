@@ -1,0 +1,60 @@
+//#region Exercicios operação 1
+
+const idade1 = 20;
+const idade2 = 25;
+
+console.log(idade1 === idade2);
+console.log(idade1 == idade2);
+console.log(idade1 !== idade2);
+console.log(idade1 <= idade2);
+console.log(idade1 >= idade2);
+console.log(idade1 < idade2);
+console.log(idade1 > idade2);
+console.log(idade2 >= 21);
+console.log(idade1 >= 21);
+console.log(idade1 + idade2 == 45);
+console.log(idade1 + idade2 == '45');
+console.log(idade1 + idade2 === '45');
+console.log(idade1 / idade2 == 0.8);
+console.log(idade1 * idade2 == 500);
+
+console.log("--------------------------------------------------------");
+
+//#endregion
+
+//#region Operação Exercicios 2
+
+const x = 5;
+const y = 10;
+const resultado = x < y;
+
+console.log(x > 6 && y > 6);
+console.log(x > 6 || y > 6); 
+console.log(!(y < 6 ));
+
+
+console.log(resultado);
+console.log(y == "10");
+console.log(y === "10");
+console.log(true == 1);
+console.log(true === 1);
+console.log(null == undefined);
+console.log(null === undefined);
+
+console.log("--------------------------------------------------------");
+
+//#endregion
+
+//#region Operação desafio
+
+const dataNascimento = new Date("2010-06-11");
+const ativo = true;
+const dezoitoAnosEmMilisegundos = 18 * 365.25 * 24 * 60 * 60 * 1000;
+
+const podeAcessar = (new Date - dataNascimento) >= dezoitoAnosEmMilisegundos && ativo;
+
+console.log(podeAcessar)
+
+console.log("--------------------------------------------------------");
+
+//#endregion
