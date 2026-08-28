@@ -41,4 +41,4 @@ const calcularDobro = (numero) => {
 }
 
 console.log(calcularDobro(1,9999999999999999))
-//#end region
+//#endregion
