@@ -1,4 +1,4 @@
-//Atividade objetos
+//#region Atividade objetos
 //-------------------------Atividade 1-------------------------
 
 
@@ -81,3 +81,160 @@ const objeto2 = JSON.parse(json2);
 
 console.log(usuarioCopia);
 console.log(objeto2);
+
+//#endregion
+
+//#region Atividade extra
+
+/*
+    estoque = [
+        [1,"Volante",10,"Prateleira 01"],
+        [2,"Pedal",5,"Prateleira 02"],
+        [3,"Câmbio",50,"Prateleira 03"],
+        [4,"Calota",100,"Prateleira 02"],
+]
+
+
+*/
+// ==========================================
+// TRANSFORMANDO EM ARRAY DE OBJETO
+// ==========================================
+const estoque = [
+    {
+    id: 1,
+    nome: "Volante",
+    quantidade: 10,
+    localização: "Pratileira 1"
+    },
+    {
+    id: 2,
+    nome: "Pedal",
+    quantidade: 5,
+    localização: "Prateleira 02"
+    },
+    {
+    id: 3,
+    nome: "Câmbio",
+    quantidade: 50,
+    localização: "Prateleira 03"
+    },
+    {
+    id: 4,
+    nome: "Calota",
+    quantidade: 100,
+    localização: "Prateleira 02"
+    }
+]
+// ==========================================
+// TRANSFORMANDO EM OBJETO DE OBJETOS
+// ==========================================
+
+
+// ==========================================
+// CADASTRAR PRODUTO
+// ==========================================
+
+
+function cadastrarProduto(nome,quantidade,localização) {
+const novoProduto = {
+    id: estoque.length + 1,
+    nome: nome,
+    quantidade: quantidade,
+    localização: localização
+};
+estoque.push(novoProduto)
+console.log("Cadastro realizado com sucesso!");
+
+
+}
+
+
+// ==========================================
+// LISTAR ESTOQUE
+// ==========================================
+
+
+function listarEstoque() {  
+    for(const produte of estoque){
+        console.log(
+            `ID: ${produte.id} `+
+            `Nome: ${produte.nome} `+
+            `Quantidade: ${produte.quantidade} `+
+            `Localização: ${produte.localização} `
+        )
+
+
+    }
+}
+
+
+// ==========================================
+// BUSCAR PRODUTO
+// ==========================================
+
+
+function buscarProduto(IdeBuscado) {  
+    for(const produto of estoque){
+        if(produto.id === IdeBuscado){
+        console.log("Produto encontrado: ");
+        console.log(
+            `ID: ${produto.id} `+
+            `Nome: ${produto.nome} `+
+            `Quantidade: ${produto.quantidade} `+
+            `Localização: ${produto.localização} `)
+            return produto
+        }
+    }
+    console.log("Nenhum produto encontrado");
+       
+}
+
+
+
+// ==========================================
+// ATUALIZAR QUANTIDADE
+// ==========================================
+
+
+function atualizarQuantidade(idbuscado, novaquantidade) {
+    for(const produto of estoque){
+        if(produto.id === idbuscado){
+        produto.quantidade = novaquantidade
+        console.log(`O produto ${produto.nome} teve sua quantida alterada para ${produto.quantidade}`);
+        return produto
+        }
+    }
+    console.log("Nenhum produto encontrado");
+       
+}
+
+
+// ==========================================
+// DELETAR PRODUTO
+// ==========================================
+
+
+function deletarProduto(){
+
+
+}
+
+
+// ==========================================
+// TESTANDO O SISTEMA
+// ==========================================
+
+
+console.log("Cadastrando produto ------------------------")
+cadastrarProduto("Motor",3,"Pratileira 1");
+
+console.log("listando produto ------------------------")
+listarEstoque()
+
+console.log("buscando produto ------------------------")
+buscarProduto(1)
+
+console.log("buscando produto ------------------------")
+atualizarQuantidade(1,30)
+
+//#endregion
